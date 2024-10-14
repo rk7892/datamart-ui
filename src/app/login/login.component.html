@@ -1,0 +1,37 @@
+<!-- <div class="container">
+    <div class="form-container">
+        <h2 class="text-center mb-4">Login</h2>
+        <form>
+            <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <p class="text-center mt-3">Don't have an account? <a routerLink="/signin">Sign Up</a></p>
+    </div>
+</div>
+ -->
+
+<div class="container">
+    <div class="form-container">
+      <h2 class="text-center mb-4">Login</h2>
+      <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="loginEmail" required [(ngModel)]="email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="loginPassword" required [(ngModel)]="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100" [disabled]="!loginForm.valid">Login</button>
+      </form>
+      <p class="text-center mt-3">Don't have an account? <a routerLink="/signin">Sign Up</a></p>
+    </div>
+</div>
+  
