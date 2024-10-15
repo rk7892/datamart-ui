@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,4 +12,10 @@ import { RouterLink } from '@angular/router';
 })
 export class DashboardComponent {
 
+  constructor(private router: Router, private toastr: ToastrService) {}
+
+  logout() {
+    this.toastr.success('You have been successfully logged out.', 'Logout Successful');
+    // this.router.navigate(['/login']);
+  }
 }

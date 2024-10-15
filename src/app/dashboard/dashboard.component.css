@@ -1,0 +1,28 @@
+.navbar {
+    background-color: rgb(112, 44, 249);
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link.active {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.data_mart-logo{
+    height: 7vh;
+    aspect-ratio: 1;
+}
