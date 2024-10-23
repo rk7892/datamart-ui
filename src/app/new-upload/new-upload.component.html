@@ -1,0 +1,40 @@
+<div class="d-flex p-2">
+    <label for="">Domain</label>
+    <select name="" id="" class="ps-2 ms-2">
+
+        <option value="">school</option>
+        <option value="">college</option>
+        <option value="">Super-Market</option>
+        <option value="">Hospital</option>
+    </select>
+</div>
+<div class="d-flex flex-column p-2 col-4">
+    <!-- Country Selection -->
+    <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+            <option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="state" class="form-label">Institute Name</label>
+        <input type="text">
+    </div>
+
+    <!-- State Selection -->
+    <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <select class="form-select" id="state" [(ngModel)]="selectedState" (change)="onStateChange()"
+            [disabled]="!states.length">
+            <option *ngFor="let state of states" [value]="state.code">{{ state.name }}</option>
+        </select>
+    </div>
+
+    <!-- District Selection -->
+    <div class="mb-3">
+        <label for="district" class="form-label">District</label>
+        <select class="form-select" id="district" [(ngModel)]="selectedDistrict" [disabled]="!districts.length">
+            <option *ngFor="let district of districts" [value]="district.name">{{ district.name }}</option>
+        </select>
+    </div>
+</div>
